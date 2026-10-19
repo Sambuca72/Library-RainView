@@ -1,0 +1,52 @@
+{
+  "python": "3.14.6",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.0",
+    "scipy": "1.18.0"
+  },
+  "measurement": "raincloudplot + fig.canvas.draw; imports excluded; all points retained",
+  "results": [
+    {
+      "rows": 10000,
+      "groups": 3,
+      "seconds": [
+        0.060754,
+        0.049869,
+        0.046812
+      ],
+      "median_seconds": 0.049869,
+      "max_seconds": 0.060754,
+      "target_seconds": 5,
+      "target_met": true
+    },
+    {
+      "rows": 10000,
+      "groups": 10,
+      "seconds": [
+        0.08598,
+        0.088018,
+        0.090028
+      ],
+      "median_seconds": 0.088018,
+      "max_seconds": 0.090028,
+      "target_seconds": 5,
+      "target_met": true
+    },
+    {
+      "rows": 100000,
+      "groups": 3,
+      "seconds": [
+        0.264646,
+        0.225361,
+        0.18874
+      ],
+      "median_seconds": 0.225361,
+      "max_seconds": 0.264646,
+      "target_seconds": null,
+      "target_met": null
+    }
+  ]
+}

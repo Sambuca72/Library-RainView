@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rainview"
+version = "0.1.0"
+description = "Raincloud plots from pandas with Russian documentation and validation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.23,<3",
+    "pandas>=1.5,<4",
+    "matplotlib>=3.6,<4",
+    "scipy>=1.9,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7,<10", "build>=1,<2", "ruff>=0.9,<1"]
+notebooks = ["jupyterlab>=4,<5", "ipykernel>=6,<8", "nbclient>=0.10,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+rainview = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+filterwarnings = [
+    "error",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["E402"]

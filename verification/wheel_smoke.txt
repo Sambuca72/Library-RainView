@@ -1,0 +1,5 @@
+Installed wheel imported outside the source directory.
+Version: 0.1.0
+API call: passed, 40 valid observations.
+PNG and SVG: saved successfully.
+Declared runtime dependencies: satisfied.
